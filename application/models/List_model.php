@@ -23,7 +23,16 @@ class List_model extends CI_Model {
                 return  array("list"=> $query->row(), "videos" => $videos);
         }
 
+        public function get_all(){
+
+                $this->db->from('list');
+                $this->db->order_by('id', 'DESC');
+                $query = $this->db->get();
+
+                return $query->result();
+        }
         
+
 
         public function create_list($image = "")
         {
@@ -44,6 +53,4 @@ class List_model extends CI_Model {
 
                 return $list_id;
         }
-
-
 }
