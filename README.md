@@ -28,6 +28,13 @@ o
     `-- YouTube ID
 ```
 
+## Installation guide
+Rename the following files as mentoned below
+1. application/config/config.sample.php --> config.php
+2. application/config/database.sample.php --> database.php
+
+Change the 'base_url' in config.php
+
 ## Sample Applications
 
 To be Added
