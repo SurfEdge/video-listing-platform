@@ -36,7 +36,7 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-list fa-fw"></i> View List</a>
+                            <a href="index.html"><i class="fa fa-list fa-fw"></i> View Lists</a>
                         </li>
                          <li>
                             <a href="index.html"><i class="fa fa-plus fa-fw"></i> Add New List</a>
