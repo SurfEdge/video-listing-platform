@@ -19,20 +19,22 @@ class List_model extends CI_Model {
                 $query = $this->db->get();
 
                 $videos = $this->video_model->list_videos($id);
+                $result = $query->row();
+                $author = $this->author_model->get($result->author_id);
 
-                return  array("list"=> $query->row(), "videos" => $videos);
+                return  array("list"=> $result, "videos" => $videos, "author" => $author);
         }
 
         public function get_all(){
 
                 $this->db->from('list');
-                $this->db->order_by('id', 'DESC');
+              //  $this->db->join('author', 'author.id = list.author_id');
+                $this->db->order_by('list.id', 'DESC');
                 $query = $this->db->get();
 
                 return $query->result();
         }
         
-
 
         public function create_list($image = "")
         {

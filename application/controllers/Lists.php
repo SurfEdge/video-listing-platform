@@ -16,6 +16,7 @@ class Lists extends CI_Controller {
 		parent::__construct();
 		$this->load->model('list_model');
 		$this->load->model('video_model');
+		$this->load->model('author_model');
 	}
 
 	public function create()
@@ -27,7 +28,10 @@ class Lists extends CI_Controller {
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');
 
-		$data  = array('title' => "Create New List" );
+		$authors = $this->author_model->get_authors();
+
+		$data  = array('title' => "Create New List" , "authors" => $authors );
+
 
 		if ($this->form_validation->run() === FALSE)
 		{

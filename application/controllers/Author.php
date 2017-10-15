@@ -40,7 +40,7 @@ class Author extends CI_Controller {
         if ( ! $this->upload->do_upload('image')) {
             $error = array('error' => $this->upload->display_errors());
             print_r($error);
-            $this->load->view('list/add', $error);
+            $this->load->view('author/add', $error);
         }
         else {
             $data = array('upload_data' => $this->upload->data());

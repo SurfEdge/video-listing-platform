@@ -39,21 +39,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <label>Description</label>
                                             <textarea class="form-control" name="description" id="description" rows="3"></textarea>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label>Select Author</label>
+                                            <select class="form-control" id="author" name="author">
+
+                                                <?php
+                                                    foreach ($authors as $author ) {
+                                                       echo "<option value=".$author->id.">".$author->name."</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                        
                                         <div class="form-group">
                                             <label>Cover Image</label>
                                             <input type="file" name="image" id="image">
                                         </div>
 
-                                        <div class="form-group">
-                                            <label>Select Author</label>
-                                            <select class="form-control" id="author" name="author">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
                                         <button type="submit" class="btn btn-success">Submit Button</button>
                                     </form>
                                 </div>
