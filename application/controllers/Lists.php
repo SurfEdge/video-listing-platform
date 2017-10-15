@@ -35,7 +35,7 @@ class Lists extends CI_Controller {
 		}
 		else
 		{
-			$config['upload_path']          = './uploads/';
+			$config['upload_path']          = './uploads/lists';
 			$config['allowed_types']        = 'gif|jpg|png';
 			$config['max_size']             = 2000;
 

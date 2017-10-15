@@ -15,7 +15,7 @@ class Author_model extends CI_Model {
     	return $this->db->insert('author', $data);
     }
 
-    public function get_authors($image = "") {
+    public function get_authors() {
     	$query = $this->db->get('author');
         return $query->result_array();
     }
