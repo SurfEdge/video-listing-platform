@@ -13,11 +13,26 @@ class List_model extends CI_Model {
                 $this->load->database();
         }
 
-        public function get_last_ten_entries()
-        {
-                $query = $this->db->get('list', 10);
+        public function get($id = 0){
+                $this->db->from('list');
+                $this->db->where('id', $id );
+                $query = $this->db->get();
+
+                $videos = $this->video_model->list_videos($id);
+
+                return  array("list"=> $query->row(), "videos" => $videos);
+        }
+
+        public function get_all(){
+
+                $this->db->from('list');
+                $this->db->order_by('id', 'DESC');
+                $query = $this->db->get();
+
                 return $query->result();
         }
+        
+
 
         public function create_list($image = "")
         {
@@ -35,9 +50,7 @@ class List_model extends CI_Model {
 
                 $this->db->insert('list', $data);
                 $list_id = $this->db->insert_id();
-                
+
                 return $list_id;
         }
-
-
 }
