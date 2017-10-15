@@ -9,7 +9,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><?php echo $list->title; ?><small> # <?php echo $list->id?> </small></h2>
+                <h2 class="page-header"><small># <?php echo $list->id?> </small><?php echo $list->title; ?> by <?php echo $author->name;?></h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -54,7 +54,7 @@
             <div class="col-lg-6">
                 <?php echo validation_errors(); ?>
 
-                <?php echo form_open_multipart( 'lists/add_video'); ?>
+                <?php echo form_open_multipart( 'lists/add_video');?>
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         Add Videos to list
@@ -95,7 +95,7 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <img width="100%" src="<?php echo base_url('uploads/'.$list->cover_image); ?>" alt="">
+                        <img width="100%" src="<?php echo base_url('uploads/lists/'.$list->cover_image); ?>" alt="">
                     </div>
                     <!-- /.panel-body -->
                 </div>

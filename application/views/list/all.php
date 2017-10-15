@@ -39,9 +39,9 @@
                                             echo "<tr>";
                                             echo "<td>".$list->id."</td>";
                                             echo "<td><h5>".$list->title."</h5></td>";
-                                            echo '<td><img width="250px" src="'.base_url('uploads/'.$list->cover_image).'" alt=""></td>';
-                                            echo "<td>".$list->title."</td>";
-                                            echo '<td><a href="view/'.$list->id.'" type="button" class="btn btn-success">View List</a></td>';
+                                            echo '<td><img width="250px" src="'.base_url('uploads/lists/'.$list->cover_image).'" alt=""></td>';
+                                            echo "<td>AA</td>";
+                                            echo '<td><a href="lists/view/'.$list->id.'" type="button" class="btn btn-success">View List</a></td>';
                                             echo "</tr>";
                                         }
                                     ?>
