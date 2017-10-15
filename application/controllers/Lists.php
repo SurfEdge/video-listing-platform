@@ -5,7 +5,9 @@ class Lists extends CI_Controller {
 
 	public function index()
 	{
-		$data  = array('title' => "Lists" );
+		$lists = $this->list_model->get_all();
+		$data  = array('title' => "Lists", "lists" => $lists );
+
 		$this->load->view('list/all',$data);
 	}
 
