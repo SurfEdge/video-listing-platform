@@ -14,16 +14,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="panel-title">Add Author</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <?php echo validation_errors(); ?>
+                        <?php echo form_open_multipart('author/add'); ?>
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Name" name="Full Name" type="text" autofocus>
+                                    <input class="form-control" placeholder="Name" name="name" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Description" name="Description" value=""></textarea>
+                                    <textarea class="form-control" placeholder="Description" name="description" value=""></textarea>
                                 </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <button type="submit" class="btn btn-md btn-success">Submit</button>
+                                <div class="form-group">
+                                    <input type="file" class="form-control" placeholder="Image" name="image" value=""></input>
+                                </div>
+                                <button type="submit" name="submit" class="btn btn-md btn-success">Submit</button>
                             </fieldset>
                         </form>
                     </div>

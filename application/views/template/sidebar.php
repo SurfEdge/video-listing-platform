@@ -45,7 +45,7 @@
                             <a href="index.html"><i class="fa fa-users fa-fw"></i> View Authors</a>
                         </li>
                          <li>
-                            <a href="Add_author"><i class="fa fa-plus fa-fw"></i> Add New Author</a>
+                            <a href="author"><i class="fa fa-plus fa-fw"></i> Add New Author</a>
                         </li>
                         <li>
                             <a href="index.html"><i class="fa fa-eye fa-fw"></i> View Public page</a>
