@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="col-lg-12">
                                     <?php echo validation_errors(); ?>
 
-                                    <?php echo form_open('lists/create'); ?>
+                                    <?php echo form_open_multipart('lists/create'); ?>
 
 
                                     <form role="form">
@@ -41,12 +41,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="form-group">
                                             <label>Cover Image</label>
-                                            <input type="file">
+                                            <input type="file" name="image" id="image">
                                         </div>
 
                                         <div class="form-group">
                                             <label>Select Author</label>
-                                            <select class="form-control">
+                                            <select class="form-control" id="author" name="author">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -58,7 +58,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
-                               
                             </div>
                             <!-- /.row (nested) -->
                         </div>
