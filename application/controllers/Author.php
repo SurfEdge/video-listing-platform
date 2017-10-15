@@ -33,7 +33,7 @@ class Author extends CI_Controller {
 		$this->load->view('add_author',$data);
     }
     else {
-    	$config['upload_path']          = './uploads/';
+    	$config['upload_path']          = './uploads/authors';
         $config['allowed_types']        = 'gif|jpg|png';
         $config['max_size']             = 2000;
         $this->load->library('upload', $config);
