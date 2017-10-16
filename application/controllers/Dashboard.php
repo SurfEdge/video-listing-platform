@@ -20,7 +20,22 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data  = array('title' => "Dashboard" );
+		$this->load->model('author_model');
+		$this->load->model('list_model');
+		$this->load->model('video_model');
+		$author_count = $this->author_model->get_author_count();
+		$list_count = $this->list_model->get_list_count();
+		$video_count = $this->video_model->get_video_count();
+		$data = array(
+    'title' => 'Dashboard',
+    'author_count' => $author_count,
+    'list_count' => $list_count,
+    'video_count' => $video_count
+		);
 		$this->load->view('dashboard_index',$data);
+	}
+
+	public function update_counts(){
+
 	}
 }

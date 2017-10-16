@@ -20,6 +20,11 @@ class Author_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_author_count() {
+    	$query = $this->db->get('author');
+      return $query->num_rows();
+    }
+
     public function get($id = 0){
         $this->db->from('author');
         $this->db->where('id', $id );
