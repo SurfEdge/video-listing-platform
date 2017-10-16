@@ -22,11 +22,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-comments fa-5x"></i>
+                                    <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>New Comments!</div>
+                                    <div class="huge"><?php echo $author_count; ?></div>
+                                    <div>Authors Registered!</div>
                                 </div>
                             </div>
                         </div>
@@ -44,15 +44,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
+                                    <i class="fa fa-list fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>New Tasks!</div>
+                                    <div class="huge"><?php echo $list_count; ?></div>
+                                    <div>Lists Created!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="lists">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -66,11 +66,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                    <i class="fa fa-video-camera fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>New Orders!</div>
+                                    <div class="huge"><?php echo $video_count; ?></div>
+                                    <div>Videos Available!</div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <!-- /.row -->
-           
+
         </div>
         <!-- /#page-wrapper -->
 

@@ -35,6 +35,10 @@ class List_model extends CI_Model {
                 return $query->result();
         }
         
+       public function get_list_count() {
+        	$query = $this->db->get('list');
+          return $query->num_rows();
+       }
 
         public function create_list($image = "")
         {

@@ -22,6 +22,11 @@ class Video_model extends CI_Model {
                 return $query->row();
         }
 
+       public function get_video_count() {
+        	$query = $this->db->get('video');
+          return $query->num_rows();
+       }
+
         public function list_videos($id = 0){
                 $this->db->from('video');
                 $this->db->where('list_id', $id );
