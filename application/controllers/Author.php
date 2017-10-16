@@ -8,16 +8,13 @@ class Author extends CI_Controller {
         $this->load->model('author_model');
         $this->load->helper('form');
     	$this->load->library('form_validation');
+        $this->load->helper('url_helper');
     }
 
     public function index() {
     	$data  = array('title' => "Login" );
 		$this->load->view('add_author',$data);
     }
-
-    // public function view($slug = NULL) {
-    //     $data['news_item'] = $this->news_model->get_news($slug);
-    // }
 
     public function add() {
     $this->load->helper('form');
@@ -40,7 +37,7 @@ class Author extends CI_Controller {
         if ( ! $this->upload->do_upload('image')) {
             $error = array('error' => $this->upload->display_errors());
             print_r($error);
-            $this->load->view('author/add', $error);
+            $this->load->view('add_author', $error);
         }
         else {
             $data = array('upload_data' => $this->upload->data());
@@ -50,5 +47,16 @@ class Author extends CI_Controller {
 			$this->load->view('add_author',$data);
     	}
 	}
-}
+    }
+    public function view_all() {
+        $data  = array('title' => "View all authors" );
+        $data['author'] = $this->author_model->get_authors();
+        $this->load->view('view_author_test',$data);
+    }
+
+    public function view($id = 0) {
+        $data  = array('title' => "View all authors" );
+        $data['author'] = $this->author_model->get($id);
+        $this->load->view('view_author_test',$data);
+    }
 }
