@@ -1,9 +1,9 @@
-# YouTube group video listing platform
-List multiple(group) YouTube videos in a page based layout.
-Ex: Lecture sessions, Movie Trailers, Favourites..
+# YouTube Group Video Listing Platform
+List multiple (group) YouTube videos in a page based layout.
+Ex: Lecture sessions, Movie Trailers, Favorites..
 
 ## Development
-This will be developed using the PHP CodeIgnitor Framework. and for the frontend Bootsrap is used
+This is developed using the PHP CodeIgnitor Framework with Bootstrap for the frontend.
 
 ## Platform components
 1. Dashboard - Where administrator can publish grouped videos
@@ -36,5 +36,4 @@ Rename the following files as mentoned below
 Change the 'base_url' in config.php
 
 ## Sample Applications
-
 To be Added
