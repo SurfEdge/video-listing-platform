@@ -1,5 +1,4 @@
 <?php defined( 'BASEPATH') OR exit( 'No direct script access allowed'); ?>
-
 <?php $this->load->view('template/head.php'); ?>
 
 <div id="wrapper">

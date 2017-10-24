@@ -102,9 +102,12 @@ class Lists extends CI_Controller {
 
 
 	public function view($id = 0){
+
 		$list = $this->list_model->get($id);		
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+
+        $list['title'] = "View List";
 
 		$this->load->view('list/view', $list);
 	}

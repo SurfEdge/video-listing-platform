@@ -25,7 +25,7 @@ class Author extends CI_Controller {
     $this->form_validation->set_rules('description', 'Description', 'required');
 
     if ($this->form_validation->run() === FALSE) {
-        $data  = array('title' => "Login" );
+        $data  = array('title' => "Add Author" );
 		$this->load->view('author/add',$data);
     }
     else {
@@ -42,7 +42,7 @@ class Author extends CI_Controller {
             $data = array('upload_data' => $this->upload->data());
             $image = $data["upload_data"]["file_name"];
         		$this->author_model->add_author($image);
-        		$data  = array('title' => "Login" );
+        		$data  = array('title' => "Add Author" );
 						$this->load->view('author/add',$data);
     		}
 			}
