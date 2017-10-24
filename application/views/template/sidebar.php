@@ -33,22 +33,22 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="<?php echo base_url();?>dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-list fa-fw"></i> View Lists</a>
+                            <a href="<?php echo base_url();?>lists"><i class="fa fa-list fa-fw"></i> View Lists</a>
                         </li>
                          <li>
-                            <a href="index.html"><i class="fa fa-plus fa-fw"></i> Add New List</a>
+                            <a href="<?php echo base_url();?>lists/create"><i class="fa fa-plus fa-fw"></i> Add New List</a>
                         </li>
                          <li>
-                            <a href="author"><i class="fa fa-users fa-fw"></i> View Authors</a>
+                            <a href="<?php echo base_url();?>author"><i class="fa fa-users fa-fw"></i> View Authors</a>
                         </li>
                          <li>
-                            <a href="author/add"><i class="fa fa-plus fa-fw"></i> Add New Author</a>
+                            <a href="<?php echo base_url();?>author/add"><i class="fa fa-plus fa-fw"></i> Add New Author</a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-eye fa-fw"></i> View Public page</a>
+                            <a href="<?php echo base_url();?>index.html"><i class="fa fa-eye fa-fw"></i> View Public page</a>
                         </li>
                     </ul>
                 </div>
