@@ -29,7 +29,8 @@
                                         <th>#</th>
                                         <th>Title</th>
                                         <th>YouTube ID</th>
-                                    </tr>
+                                        <th>Actions</th>
+                                    </tr>                                    
                                 </thead>
                                 <tbody>
                                     <?php
@@ -38,6 +39,13 @@
                                             echo "<td>".$video->position."</td>";
                                             echo "<td>".$video->title."</td>";
                                             echo "<td>".$video->youtube_id."</td>";
+                                            echo "<td>
+                                                    <button class='btn btn-success'>Edit</button>&nbsp;
+                                                    ".form_open('lists/delete_video')."
+                                                    <input name='video_id' value='".$video->id."' hidden/>
+                                                    <input name='list_id' value='".$list->id."' hidden/>
+                                                    <button class='btn btn-danger'>Delete</button></form></td>";
+                                            echo "</form>";
                                             echo "</tr>";
                                         }
                                     ?>

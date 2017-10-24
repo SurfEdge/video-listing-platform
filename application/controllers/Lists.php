@@ -83,6 +83,24 @@ class Lists extends CI_Controller {
 		}
 	}
 
+	public function delete_video(){
+		$this->load->helper('form');
+
+		$video_id = $this->input->post('video_id');
+		$list_id = $this->input->post('list_id');
+
+		if ($video_id)
+		{
+			$this->video_model->delete($video_id);
+			redirect("/lists/view/$list_id", 'refresh');
+		}
+		else
+		{
+			redirect("/lists/view/$list_id", 'refresh');
+		}
+	}
+
+
 	public function view($id = 0){
 		$list = $this->list_model->get($id);		
 		$this->load->helper('form');
