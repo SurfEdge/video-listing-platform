@@ -37,6 +37,14 @@ class Video_model extends CI_Model {
                 return $query->result();
         }
 
+        public function delete($id = 0){
+                $this->db->from('video');
+                $this->db->where('id', $id );
+                $query = $this->db->delete();
+
+                return $query;
+        }
+
         public function create()
         {
                 $this->title    = $this->input->post('title');
