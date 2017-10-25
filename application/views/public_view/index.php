@@ -1,6 +1,9 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 
-<?php $this->load->view('template/head.php'); ?>
+<?php $this->load->view('template/head.php', $title); ?>
+
 <style>
     .glyphicon {
         margin-right: 5px;
@@ -72,6 +75,7 @@
         margin: 0 0 11px;
     }
 </style>
+
 <div id="wrapper">
 
     <?php $this->load->view('template/sidebar.php'); ?>
@@ -79,7 +83,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Current Lists</h2>
+                <h2 class="page-header">Current Video Lessons</h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -94,13 +98,13 @@
         </div>
         <div id="products" class="row list-group list-group-item">
             <?php
-            foreach ($author as $single_author) {
+            foreach ($videoList as $videoList_item) {
                 echo "<div class=\"item list-group-item col-xs-4 col-lg-4\">";
                 echo "<div class=\"thumbnail\">";
-                echo "<img class=\"group list-group-image\" src=\"" . base_url('./uploads/authors/' . $single_author->image) . "\" alt=\"\" />";
+                echo "<img class=\"group list-group-image\" src=\"" . base_url('./uploads/videolists/' . $videoList_item['cover_image']) . "\" alt=\"\" />";
                 echo "<div class=\"caption row\">";
-                echo "<h4 class=\"group inner list-group-item-heading\">" . $single_author->name . "</h4>";
-                echo "<p class=\"group inner list-group-item-text\">" . $single_author->description . "</p>";
+                echo "<h4 class=\"group inner list-group-item-heading\">" . $videoList_item['title'] . "</h4>";
+                echo "<p class=\"group inner list-group-item-text\">" . $videoList_item['description'] . "</p>";
                 echo "</div></div></div>";
             }
             ?>
@@ -109,7 +113,6 @@
     </div>
     <!-- /#page-wrapper -->
 </div>
-<!-- /#wrapper -->
 <?php $this->load->view('template/footer_scripts.php'); ?>
 <script>
     $(document).ready(function () {
@@ -124,3 +127,5 @@
         });
     });
 </script>
+
+
