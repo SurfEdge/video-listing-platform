@@ -65,5 +65,24 @@ class Video_model extends CI_Model {
                 return $video_id;
         }
 
+        public function update($id = 0)
+        {
+                $this->title    = $this->input->post('title');
+                $this->youtube_id     = $this->input->post('youtube_id');
+                $this->position     = $this->input->post('position');
+                $this->list_id     = $this->input->post('list_id');
+
+                $data = array(
+                    'title' => $this->title,
+                    'position' =>$this->position,
+                    'youtube_id' =>$this->youtube_id,
+                    'list_id' =>$this->list_id
+                );
+
+                $this->db->where('id', $id);
+                $this->db->update('video', $data);
+                //$this->db->replace('video', $data);
+        }
+
 
 }

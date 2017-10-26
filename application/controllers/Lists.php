@@ -100,6 +100,23 @@ class Lists extends CI_Controller {
 		}
 	}
 
+	public function edit_video(){
+		$this->load->helper('form');
+
+		$video_id = $this->input->post('video_id');
+		$list_id = $this->input->post('list_id');
+
+		if ($video_id)
+		{
+			$this->video_model->update($video_id);
+			redirect("/lists/view/$list_id", 'refresh');
+		}
+		else
+		{
+			redirect("/lists/view/$list_id", 'refresh');
+		}
+	}
+
 
 	public function view($id = 0){
 

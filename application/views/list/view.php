@@ -39,11 +39,53 @@
                                             echo "<td>".$video->title."</td>";
                                             echo "<td>".$video->youtube_id."</td>";
                                             echo "<td>
-                                                    <button class='btn btn-success'>Edit</button>&nbsp;
+                                                    
                                                     ".form_open('lists/delete_video')."
                                                     <input name='video_id' value='".$video->id."' hidden/>
                                                     <input name='list_id' value='".$list->id."' hidden/>
-                                                    <button class='btn btn-danger'>Delete</button></form></td>";
+                                                    <button class='btn btn-danger'>Delete</button></form>
+
+
+                                                    <!-- Trigger the modal with a button -->
+                                                    <button type='button' class='btn btn-success' data-toggle='modal' data-target='#myModal'>Edit</button>
+
+                                                    <!-- Modal -->
+                                                    <div id='myModal' class='modal fade' role='dialog'>
+                                                    <div class='modal-dialog'>
+
+                                                    <!-- Modal content-->
+                                                    <div class='modal-content'>
+                                                    <div class='modal-body'>
+                                                    <div class='panel panel-success'>
+                                                    <div class='panel-body'>
+                                                    ".form_open('lists/edit_video')."
+                                                    <input name='video_id' value='".$video->id."' hidden/>
+                                                    <input name='list_id' value='".$list->id."' hidden/>
+                                                    <div>
+                                                    <h3>Edit video</h3>
+                                                    <div class='form-group'>
+                                                    <label for='position' class='ui-hidden-accessible'>Position:</label>
+                                                    <input class='form-control' type='text' name='position' value='".$video->position."' id='position'>
+                                                    </div>
+                                                    <div class='form-group'>
+                                                    <label for='title' class='ui-hidden-accessible'>Title:</label>
+                                                    <input class='form-control' type='text' name='title' value='".$video->title."' id='title'>
+                                                    </div>
+                                                    <div class='form-group'>
+                                                    <label for='youtube_id' class='ui-hidden-accessible'>YouTube id:</label>
+                                                    <input class='form-control' type='text' name='youtube_id' value='".$video->youtube_id."' id='youtube_id'>
+                                                    </div>
+                                                    <input type='submit' class='btn btn-success' value='Edit'>
+                                                    </div>
+                                                    </form>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                    </td>";
                                             echo "</form>";
                                             echo "</tr>";
                                         }
