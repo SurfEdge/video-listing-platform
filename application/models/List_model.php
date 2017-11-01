@@ -29,13 +29,10 @@ class List_model extends CI_Model
 
     public function get_all()
     {
-
         $this->db->from('list');
-        //  $this->db->join('author', 'author.id = list.author_id');
         $this->db->order_by('list.id', 'DESC');
         $query = $this->db->get();
-        return $query->result_array();
-//                return $query->result();
+        return $query->result();
     }
 
     public function get_list_count()
