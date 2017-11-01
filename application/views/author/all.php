@@ -79,7 +79,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Current Lists</h2>
+                <h2 class="page-header">Current Authors</h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
