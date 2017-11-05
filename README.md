@@ -29,7 +29,7 @@ o
 ```
 
 ## Installation guide
-Rename the following files as mentoned below
+Rename the following files as mentioned below
 1. application/config/config.sample.php --> config.php
 2. application/config/database.sample.php --> database.php
 
